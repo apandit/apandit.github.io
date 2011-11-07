@@ -3,7 +3,12 @@ layout: master
 title: Home
 ---
 
-<div class="post-summary">
+<div class="post">
     <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
-    <div class="post-summary-body">{{site.posts.first.content}}</div>
+    <hr />
+    <div class="body">{{site.posts.first.content}}</div>
+</div>
+
+<div class="list">
+    {{site.posts}}
 </div>

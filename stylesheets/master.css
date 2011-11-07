@@ -1,37 +1,57 @@
 * {}
 
 body{
-    height: 95%;
-    background: #eee;}
+    height: 99%;
+    background: #eee;
+    margin: 0px;
+}
 
 #header {
-    background: #ddd;
+    background: #369;
     text-align: center;
     display: block;
 }
 
-#name {
-    font-size: 1.8em;
-    color: #666;
-    font-family: Helvetica, Arial, Times New Roman;
+#my-name {
+    font-size: 3.4em;
+    font-family: Helvetica, Arial;
+    float: left;
+    color: white;
+}
+
+#banner{
+    display: inline-block;
+    margin: auto;
+    width: 50%;
+    min-width: 500px;
 }
 
 #links{
-    margin-right: 20px;
-    display: inline;
+    float: right;
+    padding: 0px;
+    margin: 0px;
 }
 
 #links a {
     display: inline-block;
     text-decoration: none;
-    font-size: 2.5em;
-    color: #000;
+    background: white;
+    font-size: 1.2em;
+    color: #036;
     padding: 5px;
     margin: 0px;
+    border: 1px solid #ccc;
+    border-right: 0px;
+    border-top: 0px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #links a:hover {
-    text-decoration: underline;
+    background: #036;
+    color: #fff;
+    border-color: #036;
 }
 
 #content {
@@ -40,7 +60,7 @@ body{
     min-width: 500px;
     border-left: 2px #ddd solid;
     border-right: 2px #ddd solid;
-    padding: 10px;
+    padding: 40px;
     height: 90%;
     background: #fff;
 }
@@ -50,24 +70,27 @@ em {
     font-size: 1.1em;
 }
 
-div.block {
-    min-width: 250px;
-    min-height: 200px
-    padding: 25px;
-    background: #eee;
-    display: inline-block;
-}
-
-div.block a {
-    text-decoration: none;
-    font-size: 2.5em;
-    color: #000;
-}
-
-h1 {
+.post h1 {
     font-size: 1.4em;
     font-weight: bold;
     text-decoration: none;
-    text-color: black;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.post a {
+   text-decoration: none; 
+   font-family: Helvetica, Arial;
+   color: black;
+}
+
+.post .date {
+    font-size: 0.75em;
+    font-family: Helvetica, Arial;
+    color: #369;
+}
+.post .hr {
+    color: #036;
 }
 
