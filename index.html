@@ -11,4 +11,7 @@ title: Home
 </div>
 
 <div class="list">
+    {% for item in site.posts %}
+        {{ item.title }}
+    {% endfor %}
 </div>
