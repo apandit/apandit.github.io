@@ -5,10 +5,13 @@ title: Home
 
 <div class="post">
     <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
+    <div class="date">posted {{site.posts.first.date | date_to_string}}</div>
     <hr />
     <div class="body">{{site.posts.first.content}}</div>
 </div>
 
 <div class="list">
-    {{site.posts}}
+    {% for item in site.posts %}
+    <h1><a href='{{item.url}}'>{{item.title}}</a></h1>
+    <div class="date"> posted {{item.date | date_to_string}}</div>
 </div>
