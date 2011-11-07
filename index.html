@@ -11,7 +11,7 @@ title: Home
 </div>
 
 <div class="list">
-    {% for item in site.posts %}
-        {{ item.title }}
+    {% for item in site.posts limit:3 %}
+        <a href='{{item.url}}'>{{ item.title }}</a><br/>
     {% endfor %}
 </div>
