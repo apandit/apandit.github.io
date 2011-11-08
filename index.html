@@ -11,6 +11,7 @@ title: Home
 </div>
 
 <div class="list">
+    <h1>Older posts</h1>
     {% for item in site.posts limit:3 %}
         <a href='{{item.url}}'>{{ item.title }}</a><br/>
     {% endfor %}
