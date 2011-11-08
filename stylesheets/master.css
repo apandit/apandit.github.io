@@ -100,7 +100,10 @@ h2 {
     font-family: Helvetica, Arial;
 }
 
-h2 a {
+.list a {
     color: black;
+    text-decoration: none;
+    font-weight: bold;
     font-family: Helvetica, Arial;
+    display: inline-block;
 }
