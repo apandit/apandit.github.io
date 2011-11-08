@@ -13,7 +13,9 @@ title: Home
 {% endfor %}
 
 <div class="list">
+	{% if site.posts.size > 3  %}
 	<h2>Older posts</h2>
+	{% endif %}
 	<ul>
 	{% for item in site.posts limit:10 offset:3 %}
 		<li><a href='{{item.url}}'>{{ item.title }}</a></li>

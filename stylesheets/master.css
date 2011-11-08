@@ -60,8 +60,7 @@ body{
     min-width: 500px;
     border-left: 2px #ddd solid;
     border-right: 2px #ddd solid;
-    padding: 40px;
-    height: 90%;
+    padding: 25px;
     background: #fff;
 }
 
@@ -79,10 +78,12 @@ em {
     margin: 0px;
 }
 
+.post h1 > a {
+	color: #036;
+}
 .post a {
    text-decoration: none; 
-   font-family: Helvetica, Arial;
-   color: black;
+   color: #369;
 }
 
 .post .date {
@@ -92,6 +93,10 @@ em {
 }
 .post .hr {
     color: #036;
+}
+
+.post .body {
+	padding-left: 15px;
 }
 
 h2 {

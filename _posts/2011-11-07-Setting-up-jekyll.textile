@@ -1,0 +1,71 @@
+---
+title: Setting up Jekyll on Win7
+layout: post
+---
+
+Jekyll takes a bit of effort to set up on Win7. I was hoping to just grab Ruby and gems on Cygwin to install it but that didn't work out as planned. So here is how I made Jekyll work on Win7 64-bit.
+
+h3. Installing Ruby
+
+Grab __Ruby Installer__ from their "downloads":http://rubyinstaller.org/downloads/ page. I used "Ruby 1.9.3-p0":http://rubyforge.org/frs/download.php/75465/rubyinstaller-1.9.3-p0.exe . The install should go by smoothly.
+
+h3. Installing dev-kit
+
+From the same downloads page above, download the development kit. I used "DevKit-tdm-32-4.5.2-20110712-1620-sfx":http://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20110712-1620-sfx.exe 
+
+This is just a 7z file so extract it to a folder (%DEVKITFOLDER%). Open a cmd window and @cd@ to this folder.
+
+bq. @ruby dk.rb init@
+
+Confirm that the __config.yml__ contains your ruby path.
+
+bq. @ruby dk.rb install@
+
+h3. Installing Jekyll
+
+bq. @gem install jekyll@
+
+h3. Modifying Redcloth to work (only on 4.2.8)
+
+Find __redcloth.rb__ . It should be in a folder similar to __C:\Ruby193\lib\ruby\gems\1.9.1\gems\RedCloth-4.2.8\lib__.
+
+On line 10, replace with @prefix = ''@ This will allow it to find __redcloth_scan.so__ which is in the same folder.
+
+h3. (Optional) Modifying spawn to not use Posix
+
+Find __albino.rb__. You'll need to patch it using "this fix":https://gist.github.com/1185645 .
+
+In case that page goes missing: 
+<code>
+diff --git a/lib/albino.rb b/lib/albino.rb
+index 387c8e9..b77d55e 100644
+--- a/lib/albino.rb
++++ b/lib/albino.rb
+@@ -1,4 +1,5 @@
+ require 'posix-spawn'
++require 'rbconfig'
+ 
+ 
+ =begin Wrapper for the Pygments command line tool, pygmentize. =end
+@@ -84,11 +85,21 @@ class Albino
+     proc_options":timeout" = options.delete(:timeout) || self.class.timeout_threshold
+     command = convert_options(options)
+     command.unshift(bin)
+-    Child.new(*(command + "proc_options.merge(:input => write_target)"))
++    if RbConfig::CONFIG"'host_os'" =~ /(mingw|mswin)/
++      output = ''
++      IO.popen(command, mode='r+') do |p|
++        p.write @target
++        p.close_write
++        output = p.read.strip
++      end
++      output
++    else
++      Child.new(*(command + "proc_options.merge(:input => write_target)"))
++    end
+   end
+ 
+   def colorize(options = {})
+-    out = execute(options).out
++    out = RbConfig::CONFIG"'host_os'" =~ /(mingw|mswin)/ ? execute(options) : execute(options).out
+</code>
