@@ -3,16 +3,20 @@ layout: master
 title: Home
 ---
 
+{% for item in site.posts limit:3 %}
 <div class="post">
-    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
-    <div class="date">posted {{site.posts.first.date | date_to_string}}</div>
-    <hr />
-    <div class="body">{{site.posts.first.content}}</div>
+	<h1><a href='{{item.url}}'>{{item.title}}</a></h1>
+	<div class="date">posted {{item.date | date_to_string}}</div>
+	<hr />
+	<div class="body">{{item.content}}</div>
 </div>
+{% endfor %}
 
 <div class="list">
-    <h2>Older posts</h2>
-    {% for item in site.posts limit:3 %}
-        <a href='{{item.url}}'>{{ item.title }}</a><br/>
-    {% endfor %}
+	<h2>Older posts</h2>
+	<ul>
+	{% for item in site.posts limit:10 offset:3 %}
+		<li><a href='{{item.url}}'>{{ item.title }}</a></li>
+	{% endfor %}
+	</ul>
 </div>
