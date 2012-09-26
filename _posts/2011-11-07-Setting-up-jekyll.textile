@@ -36,36 +36,39 @@ h3. (Optional) Modifying spawn to not use Posix
 Find __albino.rb__. You'll need to patch it using "this fix":https://gist.github.com/1185645 .
 
 In case that page goes missing: 
+
+<notextile>
 <code>
-diff --git a/lib/albino.rb b/lib/albino.rb
-index 387c8e9..b77d55e 100644
---- a/lib/albino.rb
-+++ b/lib/albino.rb
-@@ -1,4 +1,5 @@
- require 'posix-spawn'
-+require 'rbconfig'
- 
- 
- =begin Wrapper for the Pygments command line tool, pygmentize. =end
-@@ -84,11 +85,21 @@ class Albino
-     proc_options":timeout" = options.delete(:timeout) || self.class.timeout_threshold
-     command = convert_options(options)
-     command.unshift(bin)
--    Child.new(*(command + "proc_options.merge(:input => write_target)"))
-+    if RbConfig::CONFIG"'host_os'" =~ /(mingw|mswin)/
-+      output = ''
-+      IO.popen(command, mode='r+') do |p|
-+        p.write @target
-+        p.close_write
-+        output = p.read.strip
-+      end
-+      output
-+    else
-+      Child.new(*(command + "proc_options.merge(:input => write_target)"))
-+    end
-   end
- 
-   def colorize(options = {})
--    out = execute(options).out
+diff --git a/lib/albino.rb b/lib/albino.rb<br />
+index 387c8e9..b77d55e 100644<br />
+--- a/lib/albino.rb<br />
++++ b/lib/albino.rb<br />
+@@ -1,4 +1,5 @@<br />
+ require 'posix-spawn'<br />
++require 'rbconfig'<br />
+ <br />
+ <br />
+ =begin Wrapper for the Pygments command line tool, pygmentize. =end<br />
+@@ -84,11 +85,21 @@ class Albino<br />
+	 proc_options":timeout" = options.delete(:timeout) || self.class.timeout_threshold<br />
+	 command = convert_options(options)<br />
+	 command.unshift(bin)<br />
+-    Child.new(*(command + "proc_options.merge(:input => write_target)"))<br />
++    if RbConfig::CONFIG"'host_os'" =~ /(mingw|mswin)/<br />
++      output = ''<br />
++      IO.popen(command, mode='r+') do |p|<br />
++        p.write @target<br />
++        p.close_write<br />
++        output = p.read.strip<br />
++      end<br />
++      output<br />
++    else<br />
++      Child.new(*(command + "proc_options.merge(:input => write_target)"))<br />
++    end<br />
+   end<br />
+ <br />
+   def colorize(options = {})<br />
+-    out = execute(options).out<br />
 +    out = RbConfig::CONFIG"'host_os'" =~ /(mingw|mswin)/ ? execute(options) : execute(options).out
 </code>
+</notextile>

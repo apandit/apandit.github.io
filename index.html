@@ -3,22 +3,28 @@ layout: master
 title: Home
 ---
 
-{% for item in site.posts limit:3 %}
-<div class="post">
+{% for item in site.posts limit:1 %}
+<div class="hero-unit">
 	<h1><a href='{{item.url}}'>{{item.title}}</a></h1>
 	<div class="date">posted {{item.date | date_to_string}}</div>
-	<hr />
-	<div class="body">{{item.content}}</div>
+	<p>
+	{{item.content | truncatewords: 40}}
+	</p>
+	<!--<div class="body">{{item.content}}</div>-->
 </div>
 {% endfor %}
 
-<div class="list">
-	{% if site.posts.size > 3  %}
-	<h2>Older posts</h2>
-	{% endif %}
-	<ul>
-	{% for item in site.posts limit:10 offset:3 %}
-		<li><a href='{{item.url}}'>{{ item.title }}</a></li>
-	{% endfor %}
-	</ul>
-</div>
+<ul class="thumbnails">
+{% for item in site.posts limit:10 offset:1 %}
+	<li class="span4">
+		<div class="thumbnail">
+		<h4><a href='{{item.url}}'>{{ item.title }}</a>
+		<div class="date-small">{{item.date | date_to_string}}</div></h4>
+		<p>
+		{{item.content | truncatewords: 40}}
+		</p>
+		</div>
+	</li>
+{% endfor %}
+</ul>
+
