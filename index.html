@@ -2,29 +2,28 @@
 layout: master
 title: Home
 ---
-
 {% for item in site.posts limit:1 %}
-<div class="hero-unit">
-	<h1><a href='{{item.url}}'>{{item.title}}</a></h1>
-	<div class="date">posted {{item.date | date_to_string}}</div>
-	<p>
-	{{item.content | truncatewords: 40}}
-	</p>
-	<!--<div class="body">{{item.content}}</div>-->
+<div>
+	<h1>
+		<a href='{{item.url}}'>{{item.title}}</a><br/>
+		<small><span class="glyphicon glyphicon-time"></span> posted {{item.date | date_to_string}}</small>
+	</h1>
+	<hr />
+	<div class="post-body">
+	{{item.content }} <br/><br />
+	</div>
 </div>
 {% endfor %}
+<hr />
 
-<ul class="thumbnails">
-{% for item in site.posts limit:10 offset:1 %}
-	<li class="span4">
-		<div class="thumbnail">
-		<h4><a href='{{item.url}}'>{{ item.title }}</a>
-		<div class="date-small">{{item.date | date_to_string}}</div></h4>
-		<p>
-		{{item.content | truncatewords: 40}}
-		</p>
+<div>
+	<h3> Recent posts: </h3>
+	{% for item in site.posts limit:10 offset:1 %}
+		<div>
+			<h4>
+				<a href='{{item.url}}'>{{item.title}}</a>
+				<small><span class="glyphicon glyphicon-time"></span> posted {{item.date | date_to_string}}</small>
+			</h4>
 		</div>
-	</li>
-{% endfor %}
-</ul>
-
+	{% endfor %}
+</div>

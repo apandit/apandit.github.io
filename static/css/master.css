@@ -6,26 +6,19 @@ body{
     margin: 0px;
 }
 
-#header {
-    background: #FFF;
-    text-align: center;
-    display: block;
-	padding-top: 10px;
-	vertical-align: bottom;
-	border-bottom: 2px #ddd solid
-}
-
 #my-name {
-    font-size: 2.4em;
-    font-family: Helvetica, Arial;
-    color: black;
+	height: 100%;
+	font-size: 5em;
+    font-family: Calibri, Helvetica, Arial;
+    color: #336;
 }
 
-#banner{
-    display: inline-block;
-    margin: auto;
-    width: 50%;
-    min-width: 500px;
+#header .nav {
+	float: right;
+}
+
+.post-block {
+	padding: 20px;
 }
 
 #content {
@@ -40,52 +33,32 @@ em {
     font-size: 1.1em;
 }
 
-.post h1 {
-    font-size: 1.4em;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    padding: 0px;
-    margin: 0px;
+h1.post-title {
+	font-size: 3em;
 }
 
-.post h1 > a {
-	color: #036;
+h4.post-title{
+	font-size: 1.5em;
+}
+
+.hero-unit .post-body *{
+	font-size: 1.1em;
+}
+
+.post-body  *{
+	font-size: 1em;
 }
 
 .date {
     font-size: 0.85em;
     font-family: Helvetica, Arial;
     color: #369;
-	margin-left:15px;
+	margin-left:5px;
 }
 
 .date-small {
-    font-size: 0.65em;
+    font-size: 0.5em;
     font-family: Helvetica, Arial;
     color: #369;
-	margin-left:15px;
-}
-
-
-.post .hr {
-    color: #036;
-}
-
-.post .body {
-	padding-left: 15px;
-}
-
-h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: Helvetica, Arial;
-}
-
-.list a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Helvetica, Arial;
-    display: inline-block;
+	margin-left:5px;
 }

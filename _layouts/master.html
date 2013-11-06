@@ -1,39 +1,97 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>apandit - {{page.title}}</title>
+        <title>Abhishek's Blog - {{page.title}}</title>
 		<link rel="stylesheet" href="static/css/bootstrap.min.css" >
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="static/css/bootstrap-responsive.css" rel="stylesheet">
 		
-        <link rel="stylesheet" href="static/css/master.css" >
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="My Blog">
+		<meta name="author" content="Abhishek Pandit">
+		
+		<style>
+		body {
+			margin-top: 100px; /* 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
+		}
+
+		footer {
+			margin: 50px 0;
+		}
+		</style>
+		
     </head>
     <body>
-		<div id="header" class="row">
-			<div id="my-name" class="span4 offset2">apandit</div>
-			<div class="span4 offset2 hidden-phone">
-				<ul class="nav nav-pills">
-					<li class="active"><a href="http://apandit.github.com">Home</a></li>
-					<li><a href="http://abshack.com/blog">Blog</a></li>
-					<li><a href="http://github.com/apandit">Github</a></li>
-				</ul>
-			</div>
-			<div class="span4 offset2 hidden-desktop hidden-tablet" style="padding-top: 10px;">
-				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="http://apandit.github.com">Home</a></li>
-					<li><a href="http://abshack.com/blog">Blog</a></li>
-					<li><a href="http://github.com/apandit">Github</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div id="content" class="span8 offset3">
-				{{content}}
-				<div class="clearfix"></div>
-			</div>
-		<div class="row">
+
+    <nav class="navbar navbar-fixed-top pull-right navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="http://www.github.com/apandit">Github</a></li>
+            <li></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+	<script src="static/js/jquery-1.8.2.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-8">
+			{{content}}
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="well">
+            <h4>About Abhishek</h4>
+              <div class="row">
+                <div class="col-lg-6">
+					<img src="static/img/avatar.jpg" width="150" height="150" />
+                </div>
+                <div class="col-lg-6">
+				  <p>Embedded by day, everything else by night</p>
+				  
+				  <a href="http://www.linkedin.com/pub/abhishek-pandit/54/254/19a" style="text-decoration:none;">
+				  <span style="font: 80% Arial,sans-serif; color:#0783B6;">
+				  <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Abhishek Pandit's LinkedIn profile" style="vertical-align:middle" border="0">
+				  LinkedIn
+				  </span>
+				  </a>
+                </div>
+              </div>
+          </div><!-- /well -->
+		  
+        </div>
+      </div>
+      
+      <hr>
+      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Abhishek Pandit 2013 &middot;</p>
+			<p>Themed using <a href="http://bootswatch.com/flatly/">Flatly Bootswatch</a>
+			and <a href="http://startbootstrap.com/blog-post">Start Bootstrap blog template</a>
+			</p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
 		
-		<script src="static/js/bootstrap.min.js"></script>
-		<script src="static/js/jquery-1.8.2.min.js"></script>
     </body>
 </html>

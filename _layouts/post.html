@@ -1,11 +1,20 @@
 ---
 layout: master
 ---
-<div class="post">
-    <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
-    <div class='date'>posted {{page.date | date_to_string}}</div>
-    <hr />
-    <div class='body'>{{content}}</div>
-	<hr />
-	<div><a class="btn btn-primary" href="index.html">Back</a></div>
+<div>
+	<h1>
+		<a href='{{page.url}}'>{{page.title}}</a><br/>
+		<small><span class="glyphicon glyphicon-time"></span> posted {{page.date | date_to_string}}</small>
+	</h1>
+	<hr>
+	<div>
+	{{content}} <br/><br />
+	</div>
+	<div><a id="back-button" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-left">&nbsp;</span>Back</a></div>
+	<script>
+	
+		$("#back-button").click(function(){
+			history.go(-1);
+		});
+	</script>
 </div>
