@@ -1,109 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Abhishek's Blog - {{page.title}}</title>
-		<link rel="stylesheet" href="static/css/bootstrap.min.css" >
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="My Blog">
-		<meta name="author" content="Abhishek Pandit">
-		
-		<style>
-		body {
-			margin-top: 100px; /* 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
-		}
+  <head>
+    <title>Abhishek's Blog - {{page.title}}</title>
+    <link rel="stylesheet" href="static/css/master.css" >
 
-		footer {
-			margin: 50px 0;
-		}
-		</style>
-		
-    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal blog">
+    <meta name="author" content="Abhishek Pandit">
+  </head>
+
     <body>
 
-    <nav class="navbar navbar-fixed-top pull-right navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Blog</a>
-        </div>
+      <!-- Google analytics !--> 
+      <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="archive.html">Archive</a></li>
-            <li><a href="http://www.github.com/apandit">Github</a></li>
-            <li></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+ga('create', 'UA-93747342-1', 'auto');
+ga('send', 'pageview');
+      </script>
 
-	<script src="static/js/jquery-1.8.2.min.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-
-  <!-- Google analytics !--> 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-93747342-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-
-	
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-8">
-			{{content}}
-        </div>
-        
-        <div class="col-lg-4">
-          <div class="well">
-            <h4>About Abhishek</h4>
-              <div class="row">
-                <div class="col-lg-6">
-					<img src="static/img/avatar.jpg" width="150" height="150" />
-                </div>
-                <div class="col-lg-6">
-				  <p>Embedded by day, everything else by night</p>
-				  
-				  <a href="http://www.linkedin.com/pub/abhishek-pandit/54/254/19a" style="text-decoration:none;">
-				  <span style="font: 80% Arial,sans-serif; color:#0783B6;">
-				  <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Abhishek Pandit's LinkedIn profile" style="vertical-align:middle" border="0">
-				  LinkedIn
-				  </span>
-				  </a>
-                </div>
-              </div>
-          </div><!-- /well -->
-		  
-        </div>
+      <div id="header">
+        <ul class="navbar">
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="http://www.github.com/apandit">Github</a></li>
+        </ul>
       </div>
-      
-      <hr>
-      
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; Abhishek Pandit 2013 &middot;</p>
-			<p>Themed using <a href="http://bootswatch.com/flatly/">Flatly Bootswatch</a>
-			and <a href="http://startbootstrap.com/blog-post">Start Bootstrap blog template</a>
-			</p>
-          </div>
-        </div>
-      </footer>
 
-    </div><!-- /.container -->
-		
+      <div id="container">
+        <div id="content">
+          {{content}}
+        </div>
+      </div><!-- /.container -->
+
+      <div id="footer">
+        <span>Copyright Abhishek Pandit, 2017. </span>
+        <a href="http://www.linkedin.com/pub/abhishek-pandit/54/254/19a" style="text-decoration:none;">
+          <span style="font: 80% Arial,sans-serif; color:#0783B6;">
+            <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Abhishek Pandit's LinkedIn profile" style="vertical-align:middle" border="0">
+            LinkedIn
+          </span>
+        </a>
+      </div> <!-- footer -->
     </body>
 </html>

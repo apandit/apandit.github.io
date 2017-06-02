@@ -10,11 +10,10 @@ layout: master
 	<div>
 	{{content}} <br/><br />
 	</div>
-	<div><a id="back-button" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-left">&nbsp;</span>Back</a></div>
+	<div><a id="back-button" href="#">&lt; Back</a></div>
 	<script>
-	
-		$("#back-button").click(function(){
+    document.getElementById("back-button").addEventListener("click", function(){
 			history.go(-1);
-		});
+    });
 	</script>
 </div>

@@ -3,8 +3,8 @@ title: Switching from Lumia 710 to Nexus 5
 layout: post 
 ---
 
-!{width: 700px}static/img/nexus-5-box.jpg(Nexus 5 box)!
-~Photo taken with the Nexus 5~
+![Nexus 5 box](static/img/nexus-5-box.jpg "Nexus 5 box"){:width="90%"}
+*Photo taken with the Nexus 5*
 
 &nbsp;
 I received my Nexus 5 today, only six days from when it was announced. The specs are pretty impressive:

@@ -1,36 +1,120 @@
-* {}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body{
-    height: 99%;
-    background: #eee;
     margin: 0px;
+    font-family: Helvetica, "Sans Serif";
+    padding-bottom: 3rem;
+    position: relative;
+    min-height: 100%;
+}
+a:link,a:visited {
+  color: #55D;
+  text-decoration: none;
 }
 
-#my-name {
-	height: 100%;
-	font-size: 5em;
-    font-family: Calibri, Helvetica, Arial;
-    color: #336;
+a:hover, a:focus, a:active {
+  text-decoration: underline;
 }
 
-#header .nav {
-	float: right;
+/* Header */
+#header {
+  background-color: #412;
+  height: 4em;
 }
 
-.post-block {
-	padding: 20px;
+#header a:link,
+  #header a:visited,
+  #header a:hover,
+  #header a:active {
+  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul.navbar {
+  list-style: none;
+  list-style-type: none;
+  padding: 0em;
+  text-align: right;
+  max-width: 1024px;
+  margin: 0em auto;
+  line-height: 4em;
+}
+
+ul.navbar > li {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
+ul.navbar > li > a {
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+ul.navbar > li > a:hover,
+ul.navbar > li > a:focus {
+  background-color: #523;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+}
+
+/* Footer*/
+
+#footer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 3rem;
+  width: 100%;
+  background: #412;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Content */
+
+#container {
+  padding: 0.25em;
+  max-width: 1024px;
+  margin: 0px auto;
+  height: 100%;
 }
 
 #content {
-    border-left: 2px #ddd solid;
-    border-right: 2px #ddd solid;
-    padding: 25px;
-    background: #fff;
+  border-left: 1px #ddd solid;
+  border-right: 1px #ddd solid;
+  padding: 1em;
+  height: 100%;
 }
 
-em {
-    font-weight: bold;
-    font-size: 1.1em;
+/* Image subtitle */
+img + em {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.post-block {
+	padding: 1em;
+}
+
+
+.smaller {
+  font-size: 0.8em;
+}
+
+.larger {
+  font-size: 1.2em;
 }
 
 h1.post-title {
@@ -41,11 +125,11 @@ h4.post-title{
 	font-size: 1.5em;
 }
 
-.hero-unit .post-body *{
+.hero-unit .post-body {
 	font-size: 1.1em;
 }
 
-.post-body  *{
+.post-body {
 	font-size: 1em;
 }
 
@@ -61,4 +145,8 @@ h4.post-title{
     font-family: Helvetica, Arial;
     color: #369;
 	margin-left:5px;
+}
+
+.padleft {
+  padding-left: 0.5em;
 }
