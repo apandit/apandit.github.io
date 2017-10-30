@@ -1,0 +1,11 @@
+baseURL = "http://blog.abshack.com/"
+languageCode = "en-us"
+title = "Does this do anything?"
+Paginate = 3
+theme = "purehugo"
+
+[params]
+  title = "Abhishek's blog"
+  description = "Dumping ground for various things"
+  githubName = "apandit"
+  hideShareOptions = true

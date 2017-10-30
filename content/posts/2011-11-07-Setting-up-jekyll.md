@@ -1,6 +1,6 @@
 ---
+date: 2011-11-07T00:00:00Z
 title: Setting up Jekyll on Win7
-layout: post
 ---
 
 Jekyll takes a bit of effort to set up on Win7. I was hoping to just grab Ruby and gems on Cygwin to install it but that didn't work out as planned. So here is how I made Jekyll work on Win7 64-bit.

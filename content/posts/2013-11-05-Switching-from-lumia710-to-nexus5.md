@@ -1,19 +1,21 @@
 ---
+date: 2013-11-05T00:00:00Z
 title: Switching from Lumia 710 to Nexus 5
-layout: post 
 ---
 
-![Nexus 5 box](static/img/nexus-5-box.jpg "Nexus 5 box"){:width="90%"}
+![Nexus 5 box](img/nexus-5-box.jpg "Nexus 5 box")
+
 *Photo taken with the Nexus 5*
 
-&nbsp;
 I received my Nexus 5 today, only six days from when it was announced. The specs are pretty impressive:
+
 * Snapdragon 800 - MSM8974 (Quad-core Krait @ 2.26GHz)
 * 2GB RAM and 32GB storage
 * 8MP Rear Camera / 1.3MP Front Camera
 * _5"_ IPS Display at 1080x1920 (445ppi)
 
 Compare that to my measly Lumia 710:
+
 * MSM 8255 (Single-core Scorpion @ 1.4 GHz)
 * 512MB RAM and 8GB storage
 * 5MP Rear Camera / No front camera
@@ -22,6 +24,7 @@ Compare that to my measly Lumia 710:
 The hardware differences haven't made that much of an impression on me yet (give it some time) but Android is just foreign to me. This is actually my first Android phone; both my smartphones before this were Windows Phone 7.
 
 A few things that stood out for me:
+
 * The notifications pull-down is awesome and totally necessary
 * No built-in support for Facebook + Message; had to download app (easy enough)
 * The camera doesn't suck!

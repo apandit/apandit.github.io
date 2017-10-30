@@ -1,7 +1,8 @@
 ---
+date: 2013-09-17T00:00:00Z
 title: Domain records are hard (kinda)
-layout: post 
 ---
+
 Today, I made the questionable decision to move off my dedicated hosting and use this github page as my homepage for abshack.com.
 Unsurprisingly, it's not working. :(
 
