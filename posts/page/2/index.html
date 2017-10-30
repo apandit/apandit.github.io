@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts &middot; Abhishek&#39;s blog</title>
+
+    <meta name="description" content="Dumping ground for various things">
+
+    <meta name="generator" content="Hugo 0.29" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Posts &middot; Abhishek&#39;s blog">
+    <meta name="twitter:description" content="Dumping ground for various things">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Posts &middot; Abhishek&#39;s blog">
+    <meta property="og:description" content="Dumping ground for various things">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href="http://blog.abshack.com//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Abhishek&#39;s blog" href="http://blog.abshack.com//index.xml" />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://blog.abshack.com/">Abhishek&#39;s blog</a></h1>
+            <h2 class="brand-tagline"> Dumping ground for various things </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/apandit "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://blog.abshack.com//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">07 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://blog.abshack.com/posts/2011-11-07-getting-started/" class="post-title">Getting started with pages</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>In preparation of starting my work on Crispy (and documenting the whole process), I&rsquo;m making Github Pages my primary blog. I should start doing some lexing and parsing work this week (should be able to parse arithmetic operations, assignments and conditional statements by end of this week). This is assuming I&rsquo;m not lazy, which is always a dangerous thing to assume.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://blog.abshack.com/posts/2011-11-07-setting-up-jekyll/" class="post-title">Setting up Jekyll on Win7</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>Jekyll takes a bit of effort to set up on Win7. I was hoping to just grab Ruby and gems on Cygwin to install it but that didn&rsquo;t work out as planned. So here is how I made Jekyll work on Win7 64-bit.</p>
+
+<h2 id="installing-ruby">Installing Ruby</h2>
+
+<p>Grab <strong>Ruby Installer</strong> from their <a href="http://rubyinstaller.org/downloads/">downloads</a> page. I used <a href="http://rubyforge.org/frs/download.php/75465/rubyinstaller-1.9.3-p0.exe">Ruby 1.9.3-p0</a>. The install should go by smoothly.</p>
+
+<h3 id="installing-dev-kit">Installing dev-kit</h3>
+
+<p>From the same downloads page above, download the development kit. I used <a href="http://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20110712-1620-sfx.exe">DevKit-tdm-32-4.5.2-20110712-1620-sfx</a></p>
+
+<p>This is just a 7z file so extract it to a folder (%DEVKITFOLDER%). Open a cmd window and @cd@ to this folder.</p>
+
+<pre><code>  ruby dk.rb init
+</code></pre>
+
+<p>Confirm that the <strong>config.yml</strong> contains your ruby path.</p>
+
+<pre><code>  ruby dk.rb install
+</code></pre>
+
+<h3 id="installing-jekyll">Installing Jekyll</h3>
+
+<pre><code>  gem install jekyll
+</code></pre>
+
+<h4 id="modifying-redcloth-to-work-only-on-4-2-8">Modifying Redcloth to work (only on 4.2.8)</h4>
+
+<p>Find <strong>redcloth.rb</strong> . It should be in a folder similar to <strong>C:\Ruby193\lib\ruby\gems\1.9.1\gems\RedCloth-4.2.8\lib</strong>.</p>
+
+<p>On line 10, replace with <code>prefix = ''</code> This will allow it to find `redcloth_scan.so which is in the same folder.</p>
+
+<h4 id="optional-modifying-spawn-to-not-use-posix">(Optional) Modifying spawn to not use Posix</h4>
+
+<p>Find <strong>albino.rb</strong>. You&rsquo;ll need to patch it using <a href="https://gist.github.com/1185645">this fix</a>.</p>
+
+<p>In case that page goes missing:</p>
+
+<pre><code>  diff --git a/lib/albino.rb b/lib/albino.rb&lt;br /&gt;
+  index 387c8e9..b77d55e 100644&lt;br /&gt;
+  --- a/lib/albino.rb&lt;br /&gt;
+  +++ b/lib/albino.rb&lt;br /&gt;
+  @@ -1,4 +1,5 @@&lt;br /&gt;
+  require 'posix-spawn'&lt;br /&gt;
+  +require 'rbconfig'&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;br /&gt;
+  =begin Wrapper for the Pygments command line tool, pygmentize. =end&lt;br /&gt;
+  @@ -84,11 +85,21 @@ class Albino&lt;br /&gt;
+    proc_options&quot;:timeout&quot; = options.delete(:timeout) || self.class.timeout_threshold&lt;br /&gt;
+    command = convert_options(options)&lt;br /&gt;
+    command.unshift(bin)&lt;br /&gt;
+  -    Child.new(*(command + &quot;proc_options.merge(:input =&gt; write_target)&quot;))&lt;br /&gt;
+  +    if RbConfig::CONFIG&quot;'host_os'&quot; =~ /(mingw|mswin)/&lt;br /&gt;
+  +      output = ''&lt;br /&gt;
+  +      IO.popen(command, mode='r+') do |p|&lt;br /&gt;
+  +        p.write @target&lt;br /&gt;
+  +        p.close_write&lt;br /&gt;
+  +        output = p.read.strip&lt;br /&gt;
+  +      end&lt;br /&gt;
+  +      output&lt;br /&gt;
+  +    else&lt;br /&gt;
+  +      Child.new(*(command + &quot;proc_options.merge(:input =&gt; write_target)&quot;))&lt;br /&gt;
+  +    end&lt;br /&gt;
+    end&lt;br /&gt;
+  &lt;br /&gt;
+    def colorize(options = {})&lt;br /&gt;
+  -    out = execute(options).out&lt;br /&gt;
+  +    out = RbConfig::CONFIG&quot;'host_os'&quot; =~ /(mingw|mswin)/ ? execute(options) : execute(options).out
+</code></pre>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/posts/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 2</span>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://blog.abshack.com//js/all.min.js"></script>
+
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

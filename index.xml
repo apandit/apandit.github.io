@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abhishek&#39;s blog</title>
+    <link>http://blog.abshack.com/</link>
+    <description>Recent content on Abhishek&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.abshack.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Switching from Lumia 710 to Nexus 5</title>
+      <link>http://blog.abshack.com/posts/2013-11-05-switching-from-lumia710-to-nexus5/</link>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.abshack.com/posts/2013-11-05-switching-from-lumia710-to-nexus5/</guid>
+      <description>Photo taken with the Nexus 5
+I received my Nexus 5 today, only six days from when it was announced. The specs are pretty impressive:
+ Snapdragon 800 - MSM8974 (Quad-core Krait @ 2.26GHz) 2GB RAM and 32GB storage 8MP Rear Camera / 1.3MP Front Camera 5&amp;rdquo; IPS Display at 1080x1920 (445ppi)  Compare that to my measly Lumia 710:
+ MSM 8255 (Single-core Scorpion @ 1.4 GHz) 512MB RAM and 8GB storage 5MP Rear Camera / No front camera 3.</description>
+    </item>
+    
+    <item>
+      <title>Domain records are hard (kinda)</title>
+      <link>http://blog.abshack.com/posts/2013-09-17-domain-records-are-hard/</link>
+      <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.abshack.com/posts/2013-09-17-domain-records-are-hard/</guid>
+      <description>Today, I made the questionable decision to move off my dedicated hosting and use this github page as my homepage for abshack.com. Unsurprisingly, it&amp;rsquo;s not working. :(
+I&amp;rsquo;ve set the host records on the domain and I&amp;rsquo;ve got a CNAME in this pages repository but the page still won&amp;rsquo;t resolve properly.
+sigh
+After a couple minutes of fiddling around, I decided to go ahead and change the repository name to end with .</description>
+    </item>
+    
+    <item>
+      <title>How great is bootstrap?</title>
+      <link>http://blog.abshack.com/posts/2012-09-26-how-great-is-bootstrap/</link>
+      <pubDate>Wed, 26 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.abshack.com/posts/2012-09-26-how-great-is-bootstrap/</guid>
+      <description>Instead of playing Torchlight 2, as I normally do on weeknights, today I decided to update my github page. As is often the case, the content is neglected while I play around with new CSS or JS.
+This time, I decided to use bootstrap to style my page. With a bare minimum of effort (2 hours while watching GSL on another monitor), I made the current style, which doesn&amp;rsquo;t look half bad.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with pages</title>
+      <link>http://blog.abshack.com/posts/2011-11-07-getting-started/</link>
+      <pubDate>Mon, 07 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.abshack.com/posts/2011-11-07-getting-started/</guid>
+      <description>In preparation of starting my work on Crispy (and documenting the whole process), I&amp;rsquo;m making Github Pages my primary blog. I should start doing some lexing and parsing work this week (should be able to parse arithmetic operations, assignments and conditional statements by end of this week). This is assuming I&amp;rsquo;m not lazy, which is always a dangerous thing to assume.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Jekyll on Win7</title>
+      <link>http://blog.abshack.com/posts/2011-11-07-setting-up-jekyll/</link>
+      <pubDate>Mon, 07 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.abshack.com/posts/2011-11-07-setting-up-jekyll/</guid>
+      <description>Jekyll takes a bit of effort to set up on Win7. I was hoping to just grab Ruby and gems on Cygwin to install it but that didn&amp;rsquo;t work out as planned. So here is how I made Jekyll work on Win7 64-bit.
+Installing Ruby Grab Ruby Installer from their downloads page. I used Ruby 1.9.3-p0. The install should go by smoothly.
+Installing dev-kit From the same downloads page above, download the development kit.</description>
+    </item>
+    
+  </channel>
+</rss>
